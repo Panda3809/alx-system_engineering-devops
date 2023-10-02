@@ -1,2 +1,2 @@
 #!/bin/bash
-touch 'file' | echo 'Best School' > 'file' 
+echo 'Best School' > 'file' | touch 'file'
