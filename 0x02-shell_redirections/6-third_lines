@@ -1,0 +1,2 @@
+#!/bin/bash
+if [ -e "iacta" ] then head -3 "iacta" | tail -1 fi
