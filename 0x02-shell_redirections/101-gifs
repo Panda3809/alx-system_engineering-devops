@@ -1,2 +1,2 @@
 k#!/bin/bash
-find . -type f -name "*.gif" | sort -f | xargs -I{} basename {} .gif
+find . -type f -exec basename -s . -a {} + | LC_COLLATE=C sort -f
