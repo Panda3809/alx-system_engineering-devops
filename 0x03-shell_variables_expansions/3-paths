@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$PATH" | tr -cd ':' | echo $((${#}-1))
+IFS=: read -ra p <<< "$PATH" echo "${#p[@]}"
