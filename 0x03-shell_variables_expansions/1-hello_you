@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "hello $(who | awk '{print $1}')"
+echo "hello $(whoami)"
