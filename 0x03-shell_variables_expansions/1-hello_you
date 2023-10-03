@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "hello $(who | awk 'NR==1{print $1}')"
+user=$(who | head -n 1) printf "hello ${user%% *}\n"
