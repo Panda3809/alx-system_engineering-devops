@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -o '^.' "$1"|sed -z's/\n//g'|cut -c 2-|perl -pe'chomp if eof'
+cut -c 1 | paste -s -d"
