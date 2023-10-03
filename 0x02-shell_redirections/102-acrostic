@@ -1,2 +1,2 @@
 #!/bin/bash
-while IFS= read -r line do echo -n "${line:0:1}" done < "$1" echo
+tail -n +2 "$1" | tr -d '\n' echo -n "$(head -n 1 "$1")"
