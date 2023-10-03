@@ -1,2 +1,2 @@
 #!/bin/bash
-user=$(who | head -n 1) printf "hello ${user%% *}\n"
+user=$(who | head -n 1 | cut -d ' ' -f 1) user=${user:-MyUser} echo "hello $user"
