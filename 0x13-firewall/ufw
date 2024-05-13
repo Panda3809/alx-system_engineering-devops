@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Backup the original ufw configuration file
+cp /etc/ufw/before.rules /etc/ufw/before.rules.backup
+
+# Define the redirection rule
+REDIRECT_RULE="-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80"
+
+# Add the redirection rule to the ufw configuration file
+echo "$REDIRECT_RULE" | sudo tee -a /etc/ufw/before.rules > /dev/null
+
+# Reload ufw to apply the changes
+sudo ufw reload
+
